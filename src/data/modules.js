@@ -1,0 +1,1077 @@
+// Auto-generated from the Medvora Master Specification.
+// Each module maps to one numbered section of the spec; items are the
+// discrete features/entities that belong to that module.
+
+export const introText = `Waxaan kuu diyaariyay Master Specification daboolaya dhammaan qaybaha aasaasiga ah iyo kuwa enterprise-level ee Medvora u baahan yahay. Fadlan ogow in software weyn sida Medvora uu mar walba yeelan karo features cusub oo mustaqbalka lagu daro.`;
+
+export const modules = [
+  {
+    id: "project-foundation",
+    number: 1,
+    title: "Project Foundation",
+    items: [
+      "Project structure",
+      "Architecture",
+      "Coding standards",
+      "Naming conventions",
+      "Environment configuration",
+      ".env",
+      "Development/production configuration",
+      "Dependencies",
+      "Version control/Git",
+      "Documentation",
+      "Changelog",
+      "License",
+      "System constants",
+      "Feature flags"
+    ]
+  },
+  {
+    id: "technology-architecture",
+    number: 2,
+    title: "Technology Architecture",
+    items: [
+      "Frontend",
+      "Backend",
+      "REST API",
+      "Database",
+      "Authentication",
+      "Authorization",
+      "File storage",
+      "Caching",
+      "Background jobs",
+      "Notifications",
+      "Logging",
+      "Monitoring",
+      "Backup",
+      "Deployment",
+      "CI/CD"
+    ]
+  },
+  {
+    id: "multi-tenant-saas",
+    number: 3,
+    title: "Multi-Tenant SaaS",
+    items: [
+      "Organizations",
+      "Organization settings",
+      "Organization subscription",
+      "Tenant isolation",
+      "Branches",
+      "Departments",
+      "Locations",
+      "Organization users",
+      "Organization-level permissions",
+      "Branch-level permissions",
+      "Data isolation",
+      "Subscription limits",
+      "Usage tracking"
+    ]
+  },
+  {
+    id: "authentication",
+    number: 4,
+    title: "Authentication",
+    items: [
+      "Login",
+      "Logout",
+      "Registration",
+      "Email verification",
+      "Phone verification",
+      "Password hashing",
+      "Forgot password",
+      "Reset password",
+      "Change password",
+      "Session management",
+      "JWT/session authentication",
+      "Refresh tokens",
+      "Remember me",
+      "Account lockout",
+      "Login history",
+      "Failed login attempts",
+      "2FA/MFA",
+      "Security notifications"
+    ]
+  },
+  {
+    id: "users-roles",
+    number: 5,
+    title: "Users & Roles",
+    items: [
+      "User profiles",
+      "Roles",
+      "Permissions",
+      "Role hierarchy",
+      "Custom roles",
+      "Staff",
+      "Pharmacist",
+      "Pharmacy technician",
+      "Cashier",
+      "Lab technician",
+      "Nurse",
+      "Doctor",
+      "Manager",
+      "Accountant",
+      "Organization owner",
+      "Super admin",
+      "Permission matrix",
+      "Activity history"
+    ]
+  },
+  {
+    id: "pharmacy",
+    number: 6,
+    title: "Pharmacy",
+    items: [
+      "Pharmacy profile",
+      "Branch",
+      "Departments",
+      "Opening/closing hours",
+      "Pharmacy settings",
+      "Prescription settings",
+      "Invoice settings",
+      "Receipt settings",
+      "Tax settings",
+      "Currency",
+      "Payment methods"
+    ]
+  },
+  {
+    id: "medicine-product-master",
+    number: 7,
+    title: "Medicine/Product Master",
+    items: [
+      "Products",
+      "Medicines",
+      "Generic name",
+      "Brand name",
+      "Active ingredients",
+      "Strength",
+      "Dosage form",
+      "Route",
+      "Category",
+      "Subcategory",
+      "Manufacturer",
+      "Country of origin",
+      "SKU",
+      "Barcode",
+      "Product code",
+      "Unit",
+      "Pack",
+      "Box",
+      "Carton",
+      "Conversion units",
+      "Purchase price",
+      "Selling price",
+      "Wholesale price",
+      "Retail price",
+      "Minimum price",
+      "Maximum price",
+      "Reorder level",
+      "Product status"
+    ]
+  },
+  {
+    id: "medicine-regulatory-information",
+    number: 8,
+    title: "Medicine Regulatory Information",
+    items: [
+      "Prescription-only status",
+      "Controlled medicine flag",
+      "Registration number",
+      "Manufacturer",
+      "Batch number",
+      "Expiry date",
+      "Storage requirements",
+      "Temperature requirements",
+      "Special warnings",
+      "Product documentation"
+    ]
+  },
+  {
+    id: "inventory",
+    number: 9,
+    title: "Inventory",
+    items: [
+      "Stock",
+      "Stock by branch",
+      "Stock by location",
+      "Batch tracking",
+      "Expiry tracking",
+      "Stock movement",
+      "Stock adjustment",
+      "Stock count",
+      "Stock reconciliation",
+      "Low stock",
+      "Out of stock",
+      "Near expiry",
+      "Expired stock",
+      "Damaged stock",
+      "Lost stock",
+      "Returned stock",
+      "Reserved stock",
+      "Available stock",
+      "Stock valuation"
+    ]
+  },
+  {
+    id: "purchasing",
+    number: 10,
+    title: "Purchasing",
+    items: [
+      "Suppliers",
+      "Purchase orders",
+      "Purchase invoices",
+      "Purchase items",
+      "Receiving",
+      "Partial receiving",
+      "Full receiving",
+      "Purchase returns",
+      "Supplier payments",
+      "Supplier credits",
+      "Supplier statements",
+      "Supplier debt",
+      "Purchase history"
+    ]
+  },
+  {
+    id: "sales-pos",
+    number: 11,
+    title: "Sales / POS",
+    items: [
+      "POS",
+      "Product search",
+      "Barcode scanning",
+      "Cart",
+      "Quantity",
+      "Price",
+      "Discount",
+      "Tax",
+      "Subtotal",
+      "Total",
+      "Cash",
+      "Credit",
+      "Partial payment",
+      "Customer account",
+      "Receipt",
+      "Invoice",
+      "Sale cancellation",
+      "Sale return",
+      "Exchange",
+      "Refund",
+      "Sale history"
+    ]
+  },
+  {
+    id: "payment-system",
+    number: 12,
+    title: "Payment System",
+    items: [
+      "Cash",
+      "EVC Plus",
+      "eDahab",
+      "Bank",
+      "Card",
+      "Mobile money",
+      "Mixed payment",
+      "Partial payment",
+      "Payment reference",
+      "Payment status",
+      "Payment history",
+      "Refunds",
+      "Cash drawer"
+    ]
+  },
+  {
+    id: "customer-management",
+    number: 13,
+    title: "Customer Management",
+    items: [
+      "Customers",
+      "Customer profile",
+      "Contact",
+      "Address",
+      "Customer type",
+      "Credit limit",
+      "Balance",
+      "Debt",
+      "Payments",
+      "Customer statement",
+      "Purchase history",
+      "Returns",
+      "Customer notes"
+    ]
+  },
+  {
+    id: "supplier-management",
+    number: 14,
+    title: "Supplier Management",
+    items: [
+      "Supplier profile",
+      "Contact",
+      "Address",
+      "Supplier type",
+      "Balance",
+      "Payables",
+      "Payments",
+      "Purchase history",
+      "Returns",
+      "Supplier statement",
+      "Supplier notes"
+    ]
+  },
+  {
+    id: "debt-credit-management",
+    number: 15,
+    title: "Debt / Credit Management",
+    items: [
+      "Customer receivables",
+      "Supplier payables",
+      "Credit sales",
+      "Debt payments",
+      "Partial payments",
+      "Payment schedules",
+      "Outstanding balance",
+      "Overdue balances",
+      "Aging",
+      "Statements",
+      "Debt reports"
+    ]
+  },
+  {
+    id: "expenses",
+    number: 16,
+    title: "Expenses",
+    items: [
+      "Expense categories",
+      "Rent",
+      "Electricity",
+      "Water",
+      "Internet",
+      "Salary",
+      "Transport",
+      "Maintenance",
+      "Supplies",
+      "Other expenses",
+      "Expense approval",
+      "Expense receipts",
+      "Expense reports"
+    ]
+  },
+  {
+    id: "accounting",
+    number: 17,
+    title: "Accounting",
+    items: [
+      "Revenue",
+      "Cost of goods sold",
+      "Gross profit",
+      "Expenses",
+      "Net profit",
+      "Receivables",
+      "Payables",
+      "Cash flow",
+      "Accounts",
+      "Transactions",
+      "Financial periods",
+      "Closing period",
+      "Ledger",
+      "Journal",
+      "Trial balance"
+    ]
+  },
+  {
+    id: "profit-loss",
+    number: 18,
+    title: "Profit & Loss",
+    items: [
+      "Total sales",
+      "Sales returns",
+      "Net sales",
+      "Cost of medicines sold",
+      "Gross profit",
+      "Other income",
+      "Operating expenses",
+      "Net profit",
+      "Daily P&L",
+      "Weekly P&L",
+      "Monthly P&L",
+      "Yearly P&L"
+    ]
+  },
+  {
+    id: "cash-management",
+    number: 19,
+    title: "Cash Management",
+    items: [
+      "Opening cash",
+      "Sales cash",
+      "Expenses",
+      "Supplier payments",
+      "Customer payments",
+      "Cash withdrawals",
+      "Cash deposits",
+      "Cash transfers",
+      "Closing cash",
+      "Cash reconciliation",
+      "Cash drawer sessions"
+    ]
+  },
+  {
+    id: "prescription-management",
+    number: 20,
+    title: "Prescription Management",
+    items: [
+      "Prescription",
+      "Doctor",
+      "Patient",
+      "Medicines",
+      "Dosage",
+      "Frequency",
+      "Duration",
+      "Instructions",
+      "Prescription status",
+      "Dispensing",
+      "Partial dispensing",
+      "Prescription history"
+    ]
+  },
+  {
+    id: "patient-management",
+    number: 21,
+    title: "Patient Management",
+    items: [
+      "Patient profile",
+      "Demographics",
+      "Contact",
+      "Emergency contact",
+      "Medical history",
+      "Allergies",
+      "Medication history",
+      "Visit history",
+      "Prescription history",
+      "Laboratory history",
+      "Notes",
+      "Documents"
+    ]
+  },
+  {
+    id: "laboratory-management",
+    number: 22,
+    title: "Laboratory Management",
+    items: [
+      "Laboratory",
+      "Test categories",
+      "Test catalog",
+      "Test orders",
+      "Test samples",
+      "Sample collection",
+      "Sample status",
+      "Test results",
+      "Reference ranges",
+      "Units",
+      "Abnormal flags",
+      "Technician",
+      "Doctor",
+      "Lab invoice",
+      "Lab payment",
+      "Printable report"
+    ]
+  },
+  {
+    id: "laboratory-tests",
+    number: 23,
+    title: "Laboratory Tests",
+    items: [
+      "CBC",
+      "Hemoglobin",
+      "Blood glucose",
+      "Malaria",
+      "Urinalysis",
+      "Typhoid/Widal",
+      "Pregnancy test",
+      "Blood group",
+      "Liver tests",
+      "Kidney tests",
+      "Lipid profile",
+      "Other configured tests",
+      "(Tests-ka waa configurable, si Medvora loogu dari karo tests cusub iyada oo aan code badan la beddelin.)"
+    ]
+  },
+  {
+    id: "clinic-healthcare",
+    number: 24,
+    title: "Clinic / Healthcare",
+    items: [
+      "Patient registration",
+      "Appointments",
+      "Visits",
+      "Vitals",
+      "Consultation",
+      "Diagnosis",
+      "Treatment",
+      "Prescription",
+      "Follow-up",
+      "Medical notes",
+      "Referral",
+      "Discharge"
+    ]
+  },
+  {
+    id: "doctor-management",
+    number: 25,
+    title: "Doctor Management",
+    items: [
+      "Doctors",
+      "Specialization",
+      "Registration",
+      "Schedule",
+      "Appointments",
+      "Consultation history",
+      "Prescriptions",
+      "Reports"
+    ]
+  },
+  {
+    id: "nurse-management",
+    number: 26,
+    title: "Nurse Management",
+    items: [
+      "Nurse profiles",
+      "Patient observations",
+      "Vitals",
+      "Nursing notes",
+      "Medication administration",
+      "Care plans",
+      "Shift management"
+    ]
+  },
+  {
+    id: "appointment-system",
+    number: 27,
+    title: "Appointment System",
+    items: [
+      "Appointment booking",
+      "Calendar",
+      "Doctor schedule",
+      "Patient schedule",
+      "Appointment status",
+      "Reschedule",
+      "Cancellation",
+      "Reminder"
+    ]
+  },
+  {
+    id: "reports",
+    number: 28,
+    title: "Reports",
+    items: [
+      "Sales report",
+      "Purchase report",
+      "Profit report",
+      "Expense report",
+      "Stock report",
+      "Expiry report",
+      "Damaged stock",
+      "Returns",
+      "Customer debt",
+      "Supplier debt",
+      "Payment report",
+      "Cash report",
+      "Product performance",
+      "Staff performance",
+      "Branch performance",
+      "Lab report",
+      "Patient report"
+    ]
+  },
+  {
+    id: "dashboard",
+    number: 29,
+    title: "Dashboard",
+    items: [
+      "Sales today",
+      "Purchases today",
+      "Expenses today",
+      "Profit today",
+      "Cash today",
+      "Receivables",
+      "Payables",
+      "Stock value",
+      "Low stock",
+      "Expiring medicines",
+      "Recent sales",
+      "Recent purchases",
+      "Charts",
+      "KPIs"
+    ]
+  },
+  {
+    id: "notifications",
+    number: 30,
+    title: "Notifications",
+    items: [
+      "Low stock notification",
+      "Expiry notification",
+      "Debt reminder",
+      "Payment reminder",
+      "Appointment reminder",
+      "Prescription notification",
+      "System notification",
+      "Email",
+      "SMS",
+      "In-app notification",
+      "WhatsApp integration later"
+    ]
+  },
+  {
+    id: "document-management",
+    number: 31,
+    title: "Document Management",
+    items: [
+      "Prescription files",
+      "Lab reports",
+      "Supplier documents",
+      "Purchase invoices",
+      "Receipts",
+      "Patient documents",
+      "Attachments",
+      "File permissions",
+      "File storage",
+      "Download/preview"
+    ]
+  },
+  {
+    id: "returns",
+    number: 32,
+    title: "Returns",
+    items: [
+      "Customer return",
+      "Supplier return",
+      "Damaged return",
+      "Expired return",
+      "Refund",
+      "Stock reversal",
+      "Financial reversal",
+      "Return reasons",
+      "Return approval"
+    ]
+  },
+  {
+    id: "branch-management",
+    number: 33,
+    title: "Branch Management",
+    items: [
+      "Branch creation",
+      "Branch users",
+      "Branch stock",
+      "Branch sales",
+      "Branch purchases",
+      "Branch expenses",
+      "Branch transfers",
+      "Branch reports",
+      "Branch permissions"
+    ]
+  },
+  {
+    id: "stock-transfer",
+    number: 34,
+    title: "Stock Transfer",
+    items: [
+      "Branch → Branch",
+      "Warehouse → Branch",
+      "Transfer request",
+      "Transfer approval",
+      "Dispatch",
+      "Receiving",
+      "Transfer history"
+    ]
+  },
+  {
+    id: "warehouse",
+    number: 35,
+    title: "Warehouse",
+    items: [
+      "Warehouses",
+      "Storage locations",
+      "Shelves",
+      "Bins",
+      "Stock locations",
+      "Receiving",
+      "Dispatch",
+      "Transfers",
+      "Inventory count"
+    ]
+  },
+  {
+    id: "barcode",
+    number: 36,
+    title: "Barcode",
+    items: [
+      "Barcode generation",
+      "Barcode scanning",
+      "SKU",
+      "Product labels",
+      "Batch barcode",
+      "Receipt barcode",
+      "Prescription barcode"
+    ]
+  },
+  {
+    id: "invoice-system",
+    number: 37,
+    title: "Invoice System",
+    items: [
+      "Sales invoice",
+      "Purchase invoice",
+      "Lab invoice",
+      "Customer invoice",
+      "Supplier invoice",
+      "Invoice numbering",
+      "Invoice status",
+      "Paid/unpaid/partial",
+      "Printable PDF"
+    ]
+  },
+  {
+    id: "receipt-system",
+    number: 38,
+    title: "Receipt System",
+    items: [
+      "POS receipt",
+      "Payment receipt",
+      "Refund receipt",
+      "Customer statement",
+      "Supplier statement",
+      "A4 invoice",
+      "Thermal receipt"
+    ]
+  },
+  {
+    id: "search-filtering",
+    number: 39,
+    title: "Search & Filtering",
+    items: [
+      "Global search",
+      "Medicine search",
+      "Customer search",
+      "Supplier search",
+      "Patient search",
+      "Invoice search",
+      "Barcode search",
+      "Date filtering",
+      "Branch filtering",
+      "Status filtering",
+      "Advanced filters"
+    ]
+  },
+  {
+    id: "audit-security",
+    number: 40,
+    title: "Audit & Security",
+    items: [
+      "Audit logs",
+      "User activity",
+      "Login history",
+      "Data changes",
+      "Deleted records",
+      "Permission changes",
+      "Financial transaction logs",
+      "IP/device logging where appropriate",
+      "Security events"
+    ]
+  },
+  {
+    id: "data-protection",
+    number: 41,
+    title: "Data Protection",
+    items: [
+      "Tenant isolation",
+      "Access control",
+      "Encryption",
+      "Password hashing",
+      "Secure sessions",
+      "CSRF protection",
+      "XSS protection",
+      "SQL injection protection",
+      "API authentication",
+      "Rate limiting",
+      "Secure headers",
+      "Backup",
+      "Restore"
+    ]
+  },
+  {
+    id: "api",
+    number: 42,
+    title: "API",
+    items: [
+      "REST API",
+      "Authentication API",
+      "User API",
+      "Organization API",
+      "Pharmacy API",
+      "Product API",
+      "Inventory API",
+      "Sales API",
+      "Purchase API",
+      "Customer API",
+      "Supplier API",
+      "Patient API",
+      "Laboratory API",
+      "Reports API",
+      "Notifications API"
+    ]
+  },
+  {
+    id: "frontend",
+    number: 43,
+    title: "Frontend",
+    items: [
+      "Login",
+      "Dashboard",
+      "Sidebar",
+      "Header",
+      "Notifications",
+      "Tables",
+      "Forms",
+      "Modals",
+      "Search",
+      "Filters",
+      "Pagination",
+      "Charts",
+      "POS interface",
+      "Inventory interface",
+      "Reports",
+      "Settings"
+    ]
+  },
+  {
+    id: "ui-ux",
+    number: 44,
+    title: "UI/UX",
+    items: [
+      "Responsive design",
+      "Desktop",
+      "Tablet",
+      "Mobile",
+      "Accessibility",
+      "Keyboard shortcuts",
+      "Loading states",
+      "Empty states",
+      "Error states",
+      "Confirmation dialogs",
+      "Toast messages",
+      "Consistent design system"
+    ]
+  },
+  {
+    id: "settings",
+    number: 45,
+    title: "Settings",
+    items: [
+      "Organization settings",
+      "Branch settings",
+      "User settings",
+      "Currency",
+      "Tax",
+      "Invoice",
+      "Receipt",
+      "Payment methods",
+      "Notification settings",
+      "Security",
+      "Language",
+      "Date/time",
+      "Number formats"
+    ]
+  },
+  {
+    id: "localization",
+    number: 46,
+    title: "Localization",
+    items: [
+      "English",
+      "Somali",
+      "Arabic",
+      "Currency formatting",
+      "Date formatting",
+      "RTL/LTR",
+      "Translation system"
+    ]
+  },
+  {
+    id: "saas-subscription",
+    number: 47,
+    title: "SaaS Subscription",
+    items: [
+      "Plans",
+      "Free/trial",
+      "Basic",
+      "Professional",
+      "Enterprise",
+      "Billing",
+      "Subscription status",
+      "Trial period",
+      "Limits",
+      "Feature access",
+      "Upgrade",
+      "Downgrade",
+      "Cancellation",
+      "Usage tracking"
+    ]
+  },
+  {
+    id: "super-admin",
+    number: 48,
+    title: "Super Admin",
+    items: [
+      "Organizations",
+      "Users",
+      "Subscriptions",
+      "Plans",
+      "System settings",
+      "System logs",
+      "Platform analytics",
+      "Support tools",
+      "Feature flags"
+    ]
+  },
+  {
+    id: "analytics",
+    number: 49,
+    title: "Analytics",
+    items: [
+      "Sales trends",
+      "Profit trends",
+      "Best-selling products",
+      "Slow-moving products",
+      "Expiry risk",
+      "Stock turnover",
+      "Customer activity",
+      "Supplier activity",
+      "Branch comparison",
+      "Revenue analytics"
+    ]
+  },
+  {
+    id: "backup-recovery",
+    number: 50,
+    title: "Backup & Recovery",
+    items: [
+      "Automatic backup",
+      "Manual backup",
+      "Database restore",
+      "Backup history",
+      "Disaster recovery",
+      "Data export",
+      "CSV export",
+      "Excel export",
+      "PDF export"
+    ]
+  },
+  {
+    id: "testing",
+    number: 51,
+    title: "Testing",
+    items: [
+      "Unit tests",
+      "Integration tests",
+      "API tests",
+      "Authentication tests",
+      "Permission tests",
+      "Inventory tests",
+      "POS tests",
+      "Accounting tests",
+      "Financial calculation tests",
+      "Regression tests",
+      "Security tests"
+    ]
+  },
+  {
+    id: "error-handling",
+    number: 52,
+    title: "Error Handling",
+    items: [
+      "Validation errors",
+      "API errors",
+      "Database errors",
+      "Permission errors",
+      "Authentication errors",
+      "404",
+      "403",
+      "500",
+      "User-friendly messages",
+      "Developer logs"
+    ]
+  },
+  {
+    id: "performance",
+    number: 53,
+    title: "Performance",
+    items: [
+      "Database indexing",
+      "Query optimization",
+      "Pagination",
+      "Caching",
+      "Lazy loading",
+      "API optimization",
+      "Background tasks",
+      "Large inventory handling",
+      "Large transaction handling"
+    ]
+  },
+  {
+    id: "deployment",
+    number: 54,
+    title: "Deployment",
+    items: [
+      "Development",
+      "Staging",
+      "Production",
+      "Environment variables",
+      "PostgreSQL",
+      "Supabase",
+      "Static files",
+      "Media files",
+      "Domain",
+      "HTTPS/SSL",
+      "Server configuration",
+      "Database migration",
+      "Monitoring"
+    ]
+  },
+  {
+    id: "integrations",
+    number: 55,
+    title: "Integrations",
+    items: [
+      "Supabase",
+      "Payment providers",
+      "SMS",
+      "Email",
+      "WhatsApp",
+      "Barcode scanners",
+      "Thermal printers",
+      "A4 printers",
+      "Accounting systems",
+      "External APIs"
+    ]
+  },
+  {
+    id: "developer-documentation",
+    number: 56,
+    title: "Developer Documentation",
+    items: [
+      "README",
+      "Installation",
+      "Configuration",
+      "Database schema",
+      "API documentation",
+      "Environment variables",
+      "Deployment guide",
+      "Troubleshooting",
+      "Coding conventions",
+      "Architecture documentation"
+    ]
+  },
+];
